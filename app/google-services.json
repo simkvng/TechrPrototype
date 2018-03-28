@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "693254595435",
+    "firebase_url": "https://tinder-5ab2e.firebaseio.com",
+    "project_id": "tinder-5ab2e",
+    "storage_bucket": "tinder-5ab2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:693254595435:android:fee5e5226bc210f0",
+        "android_client_info": {
+          "package_name": "com.simcoder.tinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "693254595435-vu2hkt37g1ct4al0r16icrdg2n9l107f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCk3wSW2mUh6MkCWHp7K9mBXk0c6TJ9Bvg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
