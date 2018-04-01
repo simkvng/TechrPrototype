@@ -1,11 +1,9 @@
 package com.simcoder.tinder;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -16,8 +14,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private ArrayList<String> al;
     private ArrayAdapter<String> arrayAdapter;
-    private ArrayAdapter<Cards> arrAdapterCards;
-    private ArrayList<Cards> cards = new ArrayList<>();
+    private ArrayAdapter<Product> arrAdapterCards;
+    private ArrayList<Product> prods = new ArrayList<>();
     private int i;
 
     @Override
@@ -35,10 +33,17 @@ public class MainActivity extends AppCompatActivity {
         al.add("Product 7");
         al.add("Product 8");
 
-        cards.add(new Cards("123","123"));
-        cards.add(new Cards("345","345"));
+        String [] images = {"img1match", "img2match"};
 
+<<<<<<< HEAD
         arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, cards );
+=======
+        prods.add(new Product("Basic Laptop", "Laptop", new String[]{"Laptop", "Office"}, 799.99, images, 2.6, "url2"));));
+        prods.add(new Product("Cool Laptop", "Laptop", new String[]{"Laptop", "Gaming"}, 799.99, images, 2.6, "url2"));));
+
+
+        arrAdapterCards = new ArrayAdapter<Product>(this, R.layout.item, R.id.name, cards );
+>>>>>>> b846ab4f46dd8400315fbbf5ec885494e61f43bc
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.name, al );
 
 
