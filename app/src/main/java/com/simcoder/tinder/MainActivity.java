@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //add the view via xml or programmatically
         al = new ArrayList<>();
-        al.add("Mouse\n Gaming\nWireless");
-        al.add("Product 2");
+        al.add(prods.get(0).getName());
+        al.add(prods.get(1).getName());
         al.add("Product 3");
         al.add("Product 4");
         al.add("Product 5");
