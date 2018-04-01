@@ -17,8 +17,9 @@ import java.util.List;
 public class arrayAdapter extends ArrayAdapter<Cards>{
     Context context;
     public arrayAdapter(Context context, int resourceID, List<Cards> items){
-        Super(context, resourceID, items);
+        super(context, resourceID, items);
     }
+
     public View getView(int position, View convertView, ViewGroup parent){
         Cards cardsItem = getItem(position);
 

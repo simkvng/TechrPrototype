@@ -35,7 +35,7 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
+                android:layout_gravity="center"
                 android:textColor="@android:color/black"
                 android:textSize="40sp"
                 tools:text="hello" />
