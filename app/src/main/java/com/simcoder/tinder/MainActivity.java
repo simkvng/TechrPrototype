@@ -16,6 +16,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private ArrayList<String> al;
     private ArrayAdapter<String> arrayAdapter;
+    private ArrayAdapter<Cards> arrAdapterCards;
+    private ArrayList<Cards> cards = new ArrayList<>();
     private int i;
 
     @Override
@@ -33,19 +35,23 @@ public class MainActivity extends AppCompatActivity {
         al.add("css");
         al.add("javascript");
 
+        cards.add(new Cards("123","123"));
+        cards.add(new Cards("345","345"));
+
+        arrAdapterCards = new ArrayAdapter<Cards>(this, R.layout.item, R.id.name, cards );
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.name, al );
 
 
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
-        flingContainer.setAdapter(arrayAdapter);
+        flingContainer.setAdapter(arrAdapterCards);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
             public void removeFirstObjectInAdapter() {
                 // this is the simplest way to delete an object from the Adapter (/AdapterView)
                 Log.d("LIST", "removed object!");
-                al.remove(0);
-                arrayAdapter.notifyDataSetChanged();
+                cards.remove(0);
+                arrAdapterCards.notifyDataSetChanged();
             }
 
             @Override
@@ -57,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 // TODO: add to discarded list
 
 
-                Toast.makeText(MainActivity.this, "Left", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Discarded", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -66,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 // TODO: add to favourites list
 
 
-                Toast.makeText(MainActivity.this, "Right", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Added to Favourites", Toast.LENGTH_SHORT).show();
             }
 
             @Override
