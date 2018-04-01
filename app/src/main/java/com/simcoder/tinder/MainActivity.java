@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> al;
     private ArrayAdapter<String> arrayAdapter;
     private ArrayAdapter<Product> arrAdapterCards;
+    private FavoritesList fList = new FavoritesList();
     private ArrayList<Product> prods = new ArrayList<>();
     private int i;
 
@@ -23,9 +24,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //add the view via xml or programmatically
+        String [] images = {"img1match", "img2match"};
+
+        prods.add(new Product("Basic Laptop", "Laptop", new String[]{"Laptop", "Office"}, 799.99, images, 2.6, "url2"));;
+        prods.add(new Product("Cool Laptop", "Laptop", new String[]{"Laptop", "Gaming"}, 699.99, images, 2.6, "url2"));;
         al = new ArrayList<>();
-        al.add("Mouse\n Gaming\nWireless");
-        al.add("Product 2");
+        al.add(prods.get(0).getName());
+        al.add(prods.get(1).getName());
         al.add("Product 3");
         al.add("Product 4");
         al.add("Product 5");
@@ -33,12 +38,9 @@ public class MainActivity extends AppCompatActivity {
         al.add("Product 7");
         al.add("Product 8");
 
-        String [] images = {"img1match", "img2match"};
-
         arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, prods );
 
-        prods.add(new Product("Basic Laptop", "Laptop", new String[]{"Laptop", "Office"}, 799.99, images, 2.6, "url2"));;
-        prods.add(new Product("Cool Laptop", "Laptop", new String[]{"Laptop", "Gaming"}, 799.99, images, 2.6, "url2"));;
+
 
 
         arrAdapterCards = new ArrayAdapter<Product>(this, R.layout.item, R.id.name, prods );
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onRightCardExit(Object dataObject) {
 
                 // TODO: add to favourites list
-
+                fList.addToEnd((Product) dataObject);
 
                 Toast.makeText(MainActivity.this, "Added to Favourites", Toast.LENGTH_SHORT).show();
             }
