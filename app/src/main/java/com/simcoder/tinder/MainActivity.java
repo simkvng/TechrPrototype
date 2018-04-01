@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //add the view via xml or programmatically
         al = new ArrayList<>();
-        al.add(prods.get(0).getName());
-        al.add(prods.get(1).getName());
+        al.add("Mouse\n Gaming\nWireless");
+        al.add("Product 2");
         al.add("Product 3");
         al.add("Product 4");
         al.add("Product 5");
@@ -35,15 +35,13 @@ public class MainActivity extends AppCompatActivity {
 
         String [] images = {"img1match", "img2match"};
 
-
         arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, prods );
 
-        prods.add(new Product("Basic Laptop", "Laptop", new String[]{"Laptop", "Office"}, 799.99, images, 2.6, "url2"));
-        prods.add(new Product("Cool Laptop", "Laptop", new String[]{"Laptop", "Gaming"}, 799.99, images, 2.6, "url2"));
+        prods.add(new Product("Basic Laptop", "Laptop", new String[]{"Laptop", "Office"}, 799.99, images, 2.6, "url2"));;
+        prods.add(new Product("Cool Laptop", "Laptop", new String[]{"Laptop", "Gaming"}, 799.99, images, 2.6, "url2"));;
 
 
         arrAdapterCards = new ArrayAdapter<Product>(this, R.layout.item, R.id.name, prods );
-
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.name, al );
 
 
