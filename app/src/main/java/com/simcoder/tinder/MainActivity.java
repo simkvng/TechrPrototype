@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //add the view via xml or programmatically
         al = new ArrayList<>();
-        al.add("php");
-        al.add("c");
-        al.add("python");
-        al.add("java");
-        al.add("html");
-        al.add("c++");
-        al.add("css");
-        al.add("javascript");
+        al.add("Product 1");
+        al.add("Product 2");
+        al.add("Product 3");
+        al.add("Product 4");
+        al.add("Product 5");
+        al.add("Product 6");
+        al.add("Product 7");
+        al.add("Product 8");
 
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.name, al );
 

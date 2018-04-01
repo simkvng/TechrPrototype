@@ -27,7 +27,7 @@ public class FavouritesActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.favourites_list);
 
-        String[] values = new String[] { "Android List View",
+        String[] values = new String[]{"Android List View",
                 "Adapter implementation",
                 "Simple List View In Android",
                 "Create List View Android",
@@ -37,16 +37,16 @@ public class FavouritesActivity extends AppCompatActivity {
                 "Android Example List View"
         };
 
-        for(int i = 0; i < values.length; i++)
+        for (int i = 0; i < values.length; i++)
             favList.add(values[i]);
-/*
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+
+       /* ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, values);
         listView.setAdapter(adapter);
-/*
+
         listView.setOnItemClickListener(new OnItemClickListener() {
 
-            @Override
+           @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
@@ -64,9 +64,9 @@ public class FavouritesActivity extends AppCompatActivity {
             }
 
         });
-*/
-    }
 
+    }*/
+    }
     @Override
     protected void onStart() {
         super.onStart();

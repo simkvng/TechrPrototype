@@ -3,6 +3,7 @@ package com.simcoder.tinder;
 /**
  * Created by natha on 3/30/2018.
  */
+//this is basically the equivalent to our Product Class
 
 public class Cards {
 

@@ -16,21 +16,21 @@
         app:srcCompat="@drawable/techrtransparent" />
 
     <Button
-        android:id="@+id/favourites_list"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="favourites list" />
-
-    <Button
         android:id="@+id/browse"
-        android:layout_width="wrap_content"
+        android:layout_width="385dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="browse" />
 
     <Button
+        android:id="@+id/favourites_list"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+        android:text="favourites list" />
+
+    <Button
         android:id="@+id/discarded_list"
-        android:layout_width="162dp"
+        android:layout_width="385dp"
         android:layout_height="wrap_content"
         android:text="discarded list" />
 
