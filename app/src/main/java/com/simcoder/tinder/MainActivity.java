@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //add the view via xml or programmatically
         al = new ArrayList<>();
-        al.add("Product 1");
+        al.add("Mouse\n Gaming\nWireless");
         al.add("Product 2");
         al.add("Product 3");
         al.add("Product 4");
@@ -38,20 +38,22 @@ public class MainActivity extends AppCompatActivity {
         cards.add(new Cards("123","123"));
         cards.add(new Cards("345","345"));
 
-        arrAdapterCards = new ArrayAdapter<Cards>(this, R.layout.item, R.id.name, cards );
+        arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, cards );
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.name, al );
 
 
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
-        flingContainer.setAdapter(arrAdapterCards);
+        flingContainer.setAdapter(arrayAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
             public void removeFirstObjectInAdapter() {
                 // this is the simplest way to delete an object from the Adapter (/AdapterView)
                 Log.d("LIST", "removed object!");
-                cards.remove(0);
-                arrAdapterCards.notifyDataSetChanged();
+                al.remove(0);
+                arrayAdapter.notifyDataSetChanged();
+                // cards.remove(0);
+               // arrAdapterCards.notifyDataSetChanged();
             }
 
             @Override
