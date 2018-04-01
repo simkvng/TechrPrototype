@@ -35,15 +35,15 @@ public class MainActivity extends AppCompatActivity {
 
         String [] images = {"img1match", "img2match"};
 
-<<<<<<< HEAD
-        arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, cards );
-=======
-        prods.add(new Product("Basic Laptop", "Laptop", new String[]{"Laptop", "Office"}, 799.99, images, 2.6, "url2"));));
-        prods.add(new Product("Cool Laptop", "Laptop", new String[]{"Laptop", "Gaming"}, 799.99, images, 2.6, "url2"));));
+
+        arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, prods );
+
+        prods.add(new Product("Basic Laptop", "Laptop", new String[]{"Laptop", "Office"}, 799.99, images, 2.6, "url2"));
+        prods.add(new Product("Cool Laptop", "Laptop", new String[]{"Laptop", "Gaming"}, 799.99, images, 2.6, "url2"));
 
 
-        arrAdapterCards = new ArrayAdapter<Product>(this, R.layout.item, R.id.name, cards );
->>>>>>> b846ab4f46dd8400315fbbf5ec885494e61f43bc
+        arrAdapterCards = new ArrayAdapter<Product>(this, R.layout.item, R.id.name, prods );
+
         arrayAdapter = new ArrayAdapter<>(this, R.layout.item, R.id.name, al );
 
 
