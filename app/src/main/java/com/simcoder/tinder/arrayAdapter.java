@@ -14,14 +14,14 @@ import java.util.List;
  * Created by natha on 3/30/2018.
  */
 
-public class arrayAdapter extends ArrayAdapter<Cards>{
+public class arrayAdapter extends ArrayAdapter<Product>{
     Context context;
-    public arrayAdapter(Context context, int resourceID, List<Cards> items){
+    public arrayAdapter(Context context, int resourceID, List<Product> items){
         super(context, resourceID, items);
     }
 
     public View getView(int position, View convertView, ViewGroup parent){
-        Cards cardsItem = getItem(position);
+        Product productItem = getItem(position);
 
         if(convertView == null)
         {
@@ -31,7 +31,7 @@ public class arrayAdapter extends ArrayAdapter<Cards>{
         TextView name = (TextView) convertView.findViewById(R.id.name);
         ImageView image = (ImageView) convertView.findViewById(R.id.image);
 
-        name.setText(cardsItem.getName());
+        name.setText(productItem.getName());
         image.setImageResource(R.mipmap.ic_launcher);
 
         return convertView;
