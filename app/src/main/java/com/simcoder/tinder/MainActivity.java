@@ -79,10 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
                 // TODO: add to favourites list
                 fList.addToEnd((Product) dataObject);
-<<<<<<< HEAD
              //   fActivity.add((Product) dataObject);
-=======
->>>>>>> 95060264491249d5e86a77acfd79092c2e73a071
+
 
                 Toast.makeText(MainActivity.this, "Added to Favourites", Toast.LENGTH_SHORT).show();
             }
