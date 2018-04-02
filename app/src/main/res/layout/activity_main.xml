@@ -19,19 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
-        android:text="discarded list"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="447dp" />
+        android:text="discarded list" />
 
     <Button
         android:id="@+id/favourites_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
-        android:text="favourites list"
-        tools:layout_editor_absoluteX="212dp"
-        tools:layout_editor_absoluteY="447dp" />
+        android:text="favourites list" />
 
 </android.support.constraint.ConstraintLayout>
-
 

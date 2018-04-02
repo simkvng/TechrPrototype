@@ -15,8 +15,8 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
         mBrowse = (Button) findViewById(R.id.browse);
-        mFavourites = (Button) findViewById(R.id.favourites_list);
-        mDiscarded = (Button) findViewById(R.id.discarded_list);
+        mFavourites = (Button) findViewById(R.id.favourites);
+        mDiscarded = (Button) findViewById(R.id.discarded);
 
         mBrowse.setOnClickListener(new View.OnClickListener() {
             @Override

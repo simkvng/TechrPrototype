@@ -23,13 +23,13 @@
         android:text="browse" />
 
     <Button
-        android:id="@+id/favourites_list"
+        android:id="@+id/favourites"
         android:layout_width="385dp"
         android:layout_height="wrap_content"
         android:text="favourites list" />
 
     <Button
-        android:id="@+id/discarded_list"
+        android:id="@+id/discarded"
         android:layout_width="385dp"
         android:layout_height="wrap_content"
         android:text="discarded list" />
