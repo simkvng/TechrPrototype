@@ -25,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //add the view via xml or programmatically
-        String [] images = {"img1match", "img2match"};
-
-        prods.add(new Product("Basic Laptop", "Laptop", new String[]{"Laptop", "Office"}, 799.99, images, 2.6, "url2"));;
-        prods.add(new Product("Cool Laptop", "Laptop", new String[]{"Laptop", "Gaming"}, 699.99, images, 2.6, "url2"));;
+        String [] keyboard_img = {"https://media.memoryexpress.com/Images/Products/MX68010/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX68010/1?Size=Default"};
+        String [] laptop_img = {"https://media.memoryexpress.com/Images/Products/MX67320/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX67320/1?Size=Default"};
+        prods.add(new Product("SteelSeries Apex M750", "Keyboard", new String[]{"Keyboard", "Gaming"}, 799.99, keyboard_img, 4.6, "url2"));
+        prods.add(new Product("Microsoft Surface Pro(5th Gen)", "Laptop", new String[]{"Laptop", "Office"}, 699.99, laptop_img, 2.6, "url2"));
         al = new ArrayList<>();
         al.add(prods.get(0).getName());
         al.add(prods.get(1).getName());
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 al.remove(0);
                 arrayAdapter.notifyDataSetChanged();
                 // cards.remove(0);
-               // arrAdapterCards.notifyDataSetChanged();
+                // arrAdapterCards.notifyDataSetChanged();
             }
 
             @Override
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 // TODO: add to favourites list
                 fList.addToEnd((Product) dataObject);
              //   fActivity.add((Product) dataObject);
+                fActivity.add((Product) dataObject);
 
 
                 Toast.makeText(MainActivity.this, "Added to Favourites", Toast.LENGTH_SHORT).show();
