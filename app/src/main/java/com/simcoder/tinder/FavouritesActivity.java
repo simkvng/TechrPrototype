@@ -43,9 +43,12 @@ public class FavouritesActivity extends AppCompatActivity {
                 "List View Array Adapter",
                 "Android Example List View"
         };
-
+        /*
         for (int i = 0; i < 8; i++)
             favList.add(values[i]);
+*/
+        favList.add("Hello");
+        favList.add("Goodbye");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, favList);
