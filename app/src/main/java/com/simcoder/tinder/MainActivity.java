@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayAdapter<String> arrayAdapter;
     private ArrayAdapter<Product> arrAdapterCards;
     private FavoritesList fList = new FavoritesList();
+    private FavouritesActivity fActivity = new FavouritesActivity();
     private ArrayList<Product> prods = new ArrayList<>();
     private int i;
 
@@ -77,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
             public void onRightCardExit(Object dataObject) {
 
                 // TODO: add to favourites list
-                fList.addToEnd((Product) dataObject);
+              //  fList.addToEnd((Product) dataObject);
+                fActivity.add((Product) dataObject);
 
                 Toast.makeText(MainActivity.this, "Added to Favourites", Toast.LENGTH_SHORT).show();
             }

@@ -14,7 +14,19 @@ public class FavouritesActivity extends AppCompatActivity {
     ListView listView;
     ArrayList<String> favList = new ArrayList<String>();
 
+    public ArrayList<String> getFavList()
+    {
+        return favList;
+    }
 
+    public void setFavList()
+    {
+        this.favList = favList;
+    }
+    public void add(Product prod)
+    {
+        favList.add(prod.getName());
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
