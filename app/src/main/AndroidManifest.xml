@@ -21,6 +21,7 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SummaryActivity" />
         <activity android:name=".FavouritesActivity" />
+        <activity android:name=".DiscardedActivity" />
 
     </application>
 

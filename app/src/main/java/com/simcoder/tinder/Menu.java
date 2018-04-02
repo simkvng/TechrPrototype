@@ -9,6 +9,8 @@ import android.widget.Button;
 public class Menu extends AppCompatActivity {
 
     private Button mBrowse, mFavourites, mDiscarded;
+    public FavoritesList favList = new FavoritesList();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,16 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, FavouritesActivity.class);
+                startActivity(intent);
+                //finish();
+                return;
+            }
+        });
+
+        mDiscarded.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, DiscardedActivity.class);
                 startActivity(intent);
                 //finish();
                 return;

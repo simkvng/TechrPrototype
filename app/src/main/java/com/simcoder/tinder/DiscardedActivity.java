@@ -2,37 +2,22 @@ package com.simcoder.tinder;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.AdapterView;
+
 import java.util.ArrayList;
 
 
-public class FavouritesActivity extends AppCompatActivity {
+public class DiscardedActivity extends AppCompatActivity {
     ListView listView;
-    ArrayList<String> favList = new ArrayList<String>();
+    ArrayList<String> discList = new ArrayList<String>();
 
-    public ArrayList<String> getFavList()
-    {
-        return favList;
-    }
-
-    public void setFavList()
-    {
-        this.favList = favList;
-    }
-    public void add(Product prod)
-    {
-        favList.add(prod.getName());
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_favourites);
+        setContentView(R.layout.activity_discarded);
 
-        listView = (ListView) findViewById(R.id.favourites_list);
+        listView = (ListView) findViewById(R.id.discarded_list);
 
         String[] values = new String[]{
                 "Cool Mouse",
@@ -42,10 +27,10 @@ public class FavouritesActivity extends AppCompatActivity {
         };
 
         for (int i = 0; i < values.length; i++)
-            favList.add(values[i]);
+            discList.add(values[i]);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, android.R.id.text1, favList);
+                android.R.layout.simple_list_item_1, android.R.id.text1, discList);
         listView.setAdapter(adapter);
 /*
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
