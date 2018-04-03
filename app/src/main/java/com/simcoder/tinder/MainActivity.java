@@ -34,15 +34,12 @@ public class MainActivity extends AppCompatActivity {
         String [] laptop_img = {"https://media.memoryexpress.com/Images/Products/MX67320/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX67320/1?Size=Default"};
         prods.add(new Product("SteelSeries Apex M750", "Keyboard", new String[]{"Keyboard", "Gaming"}, 799.99, keyboard_img, 4.6, "url2"));
         prods.add(new Product("Microsoft Surface Pro(5th Gen)", "Laptop", new String[]{"Laptop", "Office"}, 699.99, laptop_img, 2.6, "url2"));
+        prods.add(new Product("Logitech G502", "Mouse", new String[]{"Laptop", "Office"}, 699.99, laptop_img, 2.6, "url2"));
+
         al = new ArrayList<>();
         al.add(prods.get(0).getName());
         al.add(prods.get(1).getName());
-        al.add("Product 3");
-        al.add("Product 4");
-        al.add("Product 5");
-        al.add("Product 6");
-        al.add("Product 7");
-        al.add("Product 8");
+        al.add(prods.get(2).getName());
 
         arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, prods );
 
