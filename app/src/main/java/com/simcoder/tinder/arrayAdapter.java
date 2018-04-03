@@ -30,7 +30,7 @@ public class arrayAdapter extends ArrayAdapter<Product>{
 
         TextView name = (TextView) convertView.findViewById(R.id.name);
         ImageView image = (ImageView) convertView.findViewById(R.id.image);
-        ImageView picView = (ImageView) convertView.findViewById(R.id.ProductPic);
+        ImageView picView = (ImageView) convertView.findViewById(R.id.productPic);
         name.setText(productItem.getName());
         image.setImageResource(R.mipmap.ic_launcher);
 

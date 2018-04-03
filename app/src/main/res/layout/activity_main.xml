@@ -22,7 +22,7 @@
         android:text="discarded list" />
 
     <Button
-        android:id="@+id/favourites_list"
+        android:id="@+id/favourites"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"

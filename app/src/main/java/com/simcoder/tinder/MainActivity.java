@@ -20,11 +20,16 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Product> prods = new ArrayList<>();
     private int i;
 
+    //ImageView ivImage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         //add the view via xml or programmatically
+
+
         String [] keyboard_img = {"https://media.memoryexpress.com/Images/Products/MX68010/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX68010/1?Size=Default"};
         String [] laptop_img = {"https://media.memoryexpress.com/Images/Products/MX67320/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX67320/1?Size=Default"};
         prods.add(new Product("SteelSeries Apex M750", "Keyboard", new String[]{"Keyboard", "Gaming"}, 799.99, keyboard_img, 4.6, "url2"));
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, prods );
 
-
+        //Picasso.with(getApplicationContext()).load(keyboard_img[0]).into(ivImage);
 
 
         arrAdapterCards = new ArrayAdapter<Product>(this, R.layout.item, R.id.name, prods );
