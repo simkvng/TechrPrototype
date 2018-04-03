@@ -20,10 +20,10 @@ public class DiscardedActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.discarded_list);
 
         String[] values = new String[]{
-                "Cool Mouse",
-                "Very cool Laptop",
-                "PC Case",
-                "Phone Charger"
+                "HP Envy x360",
+                "SteelSeries Apex M750",
+                "Microsoft Surface Pro(5th Gen)",
+                "Logitech G502"
         };
 
         for (int i = 0; i < values.length; i++)

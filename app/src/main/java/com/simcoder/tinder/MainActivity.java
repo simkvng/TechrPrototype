@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         String [] keyboard_img = {"https://media.memoryexpress.com/Images/Products/MX68010/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX68010/1?Size=Default"};
         String [] laptop_img = {"https://media.memoryexpress.com/Images/Products/MX67320/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX67320/1?Size=Default"};
+        prods.add(new Product("HP Envy x360", "Laptop", new String[]{"Keyboard", "Gaming"}, 799.99, keyboard_img, 4.6, "url2"));
         prods.add(new Product("SteelSeries Apex M750", "Keyboard", new String[]{"Keyboard", "Gaming"}, 799.99, keyboard_img, 4.6, "url2"));
         prods.add(new Product("Microsoft Surface Pro(5th Gen)", "Laptop", new String[]{"Laptop", "Office"}, 699.99, laptop_img, 2.6, "url2"));
         prods.add(new Product("Logitech G502", "Mouse", new String[]{"Laptop", "Office"}, 699.99, laptop_img, 2.6, "url2"));
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
                 // Ask for more data here
-                al.add("XML ".concat(String.valueOf(i)));
+               // al.add("XML ".concat(String.valueOf(i)));
                 arrayAdapter.notifyDataSetChanged();
                 Log.d("LIST", "notified");
                 i++;
