@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClicked(int itemPosition, Object dataObject) {
                 Toast.makeText(MainActivity.this, "Item Clicked", Toast.LENGTH_SHORT).show();
                 // move to a new activity (summary) and show all object properties
-                Intent intent = new Intent(MainActivity.this, SummaryActivity.class);
+                Intent intent = new Intent(MainActivity.this, FavouritesActivity.class);
                 startActivity(intent);
                 //finish();
                 return;
