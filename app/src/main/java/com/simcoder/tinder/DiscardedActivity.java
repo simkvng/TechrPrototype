@@ -20,10 +20,10 @@ public class DiscardedActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.discarded_list);
 
         String[] values = new String[]{
-                "HP Envy x360",
-                "SteelSeries Apex M750",
+                "Logitech G502",
                 "Microsoft Surface Pro(5th Gen)",
-                "Logitech G502"
+                "SteelSeries Apex M750",
+                "HP Envy x360"
         };
 
         for (int i = 0; i < values.length; i++)
