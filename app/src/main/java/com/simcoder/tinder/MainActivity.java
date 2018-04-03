@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         al.add(prods.get(0).getName());
         al.add(prods.get(1).getName());
         al.add(prods.get(2).getName());
+        al.add(prods.get(3).getName());
 
         arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, prods );
 
