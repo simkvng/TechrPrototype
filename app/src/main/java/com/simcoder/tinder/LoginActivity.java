@@ -15,6 +15,10 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+/*
+    this class is to be implemented in future versions. currently not implemented because of
+    problems we ran into trying to use the class.
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private Button mLogin;

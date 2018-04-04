@@ -1,5 +1,18 @@
 package com.simcoder.tinder;
 
+/**
+ * Author:       INVent.
+ * Instructor:   Faith-Michael Uzoka
+ * Course:       COMP 2633
+ * E-mails:      vmend664@mtroyal.ca, nchua235@mtroyal.ca, ipiet870@mtroyal.ca
+ * Date:         April 3rd 2018
+ * Purpose:
+ *     - Main Activity provides all functionalities for when a user is on the browsing interface.
+ * Details:
+ *     - handles the swipe-cards feature (swiping left and right) and adds a product to their
+ *       respective lists.
+ */
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         //add the view via xml or programmatically
 
 
+        //test adding
+
         String [] keyboard_img = {"https://media.memoryexpress.com/Images/Products/MX68010/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX68010/1?Size=Default"};
         String [] laptop_img = {"https://media.memoryexpress.com/Images/Products/MX67320/0?Size=Default","https://media.memoryexpress.com/Images/Products/MX67320/1?Size=Default"};
         prods.add(new Product("HP Envy x360", "Laptop", new String[]{"Keyboard", "Gaming"}, 799.99, keyboard_img, 4.6, "url2"));
@@ -45,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         arrAdapterCards = new ArrayAdapter<>(this, R.layout.item, R.id.name, prods );
 
-        //Picasso.with(getApplicationContext()).load(keyboard_img[0]).into(ivImage);
+        //Picasso.with(getApplicationContext()).load(keyboard_img[0]).into(ivImage); <-- used to load product images on card; currently not working.
 
 
         arrAdapterCards = new ArrayAdapter<Product>(this, R.layout.item, R.id.name, prods );
@@ -58,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
             public void removeFirstObjectInAdapter() {
-                // this is the simplest way to delete an object from the Adapter (/AdapterView)
                 Log.d("LIST", "removed object!");
                 al.remove(0);
                 arrayAdapter.notifyDataSetChanged();
@@ -66,32 +80,33 @@ public class MainActivity extends AppCompatActivity {
                 // arrAdapterCards.notifyDataSetChanged();
             }
 
+            /** executes the function body off a left swipe by the user.
+             * @param dataObject - the object to be swiped
+             */
             @Override
             public void onLeftCardExit(Object dataObject) {
-                //Do something on the left!
-                //You also have access to the original object.
-                //If you want to use it just cast it (String) dataObject
-
-                // TODO: add to discarded list
-
 
                 Toast.makeText(MainActivity.this, "Discarded", Toast.LENGTH_SHORT).show();
             }
 
+            /** executes the function body off a right swipe by the user.
+              * @param dataObject - the object to be swiped
+              */
             @Override
             public void onRightCardExit(Object dataObject) {
 
-                // TODO: add to favourites list
                     fActivity.add((Product) dataObject);
 
 
                 Toast.makeText(MainActivity.this, "Added to Favourites", Toast.LENGTH_SHORT).show();
             }
 
+            /** executes the function body when their are no more products to display on the screen.
+             * @param itemsInAdapter - number of items remaining in the arrayAdapter
+             */
             @Override
             public void onAdapterAboutToEmpty(int itemsInAdapter) {
-                // Ask for more data here
-               // al.add("XML ".concat(String.valueOf(i)));
+
                 arrayAdapter.notifyDataSetChanged();
                 Log.d("LIST", "notified");
                 i++;

@@ -11,7 +11,13 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by natha on 3/30/2018.
+ * Author:       INVent.
+ * Instructor:   Faith-Michael Uzoka
+ * Course:       COMP 2633
+ * E-mails:      vmend664@mtroyal.ca, nchua235@mtroyal.ca, ipiet870@mtroyal.ca
+ * Date:         April 3rd 2018
+ * Purpose:
+ *     - arrayAdapter class is used for being able to display an ArrayList of products in many different views.
  */
 
 public class arrayAdapter extends ArrayAdapter<Product>{
