@@ -6,6 +6,18 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+/**
+ * Author: 		INVent.
+ * Instructor: 	Faith-Michael Uzoka
+ * Course: 		COMP 2633
+ * E-mails: 	vmend664@mtroyal.ca, nchua235@mtroyal.ca, ipiet870@mtroyal.ca
+ * Date: 		April 3rd 2018
+ * Purpose:
+ * 		- The user discarded list of products
+ * Details:
+ * 		- It adds elements whenever the user right or left swipe them,
+ * 	   	creating a list of discarded products, similar to a history list. More implementation to be done.
+ */
 
 
 public class DiscardedActivity extends AppCompatActivity {
@@ -13,6 +25,9 @@ public class DiscardedActivity extends AppCompatActivity {
     ArrayList<String> discList = new ArrayList<String>();
 
     @Override
+    /**
+     * Adds test elements into the discLit of the class
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_discarded);

@@ -8,6 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.AdapterView;
 import java.util.ArrayList;
+/**
+ * Author: 		INVent.
+ * Instructor: 	Faith-Michael Uzoka
+ * Course: 		COMP 2633
+ * E-mails: 	vmend664@mtroyal.ca, nchua235@mtroyal.ca, ipiet870@mtroyal.ca
+ * Date: 		April 3rd 2018
+ * Purpose:
+ * 		- The user favourite list of products
+ * Details:
+ * 		- Whenever the user swipes a product to the right it is added to this list. More implementation to be done.
+ */
 
 
 public class FavouritesActivity extends AppCompatActivity {
@@ -23,11 +34,19 @@ public class FavouritesActivity extends AppCompatActivity {
     {
         this.favList = favList;
     }
+
+    /**
+     * adds product to list
+     * @param prod - prod to be added
+     */
     public void add(Product prod)
     {
         favList.add(prod.getName());
     }
     @Override
+    /**
+     * Adds test elements nto the favList of the class.
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favourites);
@@ -70,11 +89,17 @@ public class FavouritesActivity extends AppCompatActivity {
 */
     }
 
+    /**
+     *
+     */
     @Override
     protected void onStart() {
         super.onStart();
     }
 
+    /**
+     *
+     */
     @Override
     protected void onStop() {
         super.onStop();
