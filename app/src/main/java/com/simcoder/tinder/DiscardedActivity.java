@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * 		- The user discarded list of products
  * Details:
  * 		- It adds elements whenever the user right or left swipe them,
- * 	   	creating a list of discarded products, similar to a history list. More implementation to be done.
+ * 	   	  creating a list of discarded products, similar to a history list. More implementation to be done.
  */
 
 
@@ -26,7 +26,7 @@ public class DiscardedActivity extends AppCompatActivity {
 
     @Override
     /**
-     * Adds test elements into the discLit of the class
+     * Adds test elements into the discList of the class
      */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
